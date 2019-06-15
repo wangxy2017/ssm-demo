@@ -24,6 +24,11 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index() {
+        return "index";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
         return "login";
@@ -35,9 +40,9 @@ public class LoginController {
         User user1 = userService.queryUser(user);
         if (user1 != null) {
             request.getSession().setAttribute("loginUser", user1);
-            logger.debug("登录成功:{}",user1.getNickName());
-            return new CommonRespose(0,"登录成功",user1);
+            logger.debug("登录成功:{}", user1.getNickName());
+            return new CommonRespose(0, "登录成功", user1);
         }
-        return new CommonRespose(-1,"用户名或密码错误") ;
+        return new CommonRespose(-1, "用户名或密码错误");
     }
 }

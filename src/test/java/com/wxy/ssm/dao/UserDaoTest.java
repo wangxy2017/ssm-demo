@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @Description TODO
  **/
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:config/spring-mybatis.xml"})
+@ContextConfiguration(locations = {"classpath:config/spring.xml","classpath:config/spring-mybatis.xml"})
 public class UserDaoTest {
     private static final Logger logger = LoggerFactory.getLogger(UserDaoTest.class);
     @Autowired

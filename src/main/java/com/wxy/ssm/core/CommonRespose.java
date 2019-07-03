@@ -10,10 +10,6 @@ public class CommonRespose {
     private String message;
     private Object data;
 
-    public CommonRespose(Integer code,String message){
-        this.code = code;
-        this.message = message;
-    }
     public CommonRespose(Integer code,String message,Object data){
         this.code = code;
         this.message = message;

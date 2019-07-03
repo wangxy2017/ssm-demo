@@ -43,6 +43,6 @@ public class LoginController {
             logger.debug("登录成功:{}", user1.getNickName());
             return new CommonRespose(0, "登录成功", user1);
         }
-        return new CommonRespose(-1, "用户名或密码错误");
+        return new CommonRespose(-1, "用户名或密码错误",null);
     }
 }
